@@ -36,9 +36,13 @@ body {
         padding: 10px 0;
         transition: transform 0.3s ease;
     }
-    .linha-cima, .linha-baixo {
-        grid-template-columns: 1fr !important;
-        padding: 0 10px !important;
+    /* Garante que as caixas internas não ultrapassam o limite do ecrã do telemóvel */
+    .linha-cima > div, .linha-baixo > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
     }
 
     /* Roda levemente o ícone ao clicar */
