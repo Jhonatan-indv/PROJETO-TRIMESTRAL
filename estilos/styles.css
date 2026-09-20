@@ -26,6 +26,18 @@ body {
 }
 /* 1. No PC: O checkbox e o ícone do hambúrguer ficam SEMPRE invisíveis */
 @media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Garante que todas as caixas e linhas respeitam rigidamente o limite do ecrã */
+    .linha-cima, .linha-baixo, .menu-fixo, header {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
     /* Mostra o ícone do hambúrguer no telemóvel */
     .menu-icon {
         display: block !important;
