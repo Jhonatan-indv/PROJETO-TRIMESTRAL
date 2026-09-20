@@ -34,10 +34,35 @@ body {
     }
 
     /* Garante que todas as caixas e linhas respeitam rigidamente o limite do ecrã */
-    .linha-cima, .linha-baixo, .menu-fixo, header {
-        max-width: 100% !important;
+    @media (max-width: 768px) {
+    /* ... (todo o teu código media anterior) ... */
+
+    /* Garante que o bloco de conteúdo interno se comporta de forma fluida */
+    .linha-cima > div, .linha-baixo > div, 
+    article, section, .caixa {
+        position: relative !important;
+        width: 100% !important;
+        margin: 15px 0 !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Corrige os títulos para ficarem bem encaixados no topo de cada caixa no telemóvel */
+    .linha-cima h2, .linha-baixo h2, 
+    article h2, section h2, .caixa h2 {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
         box-sizing: border-box !important;
     }
+}
     /* Mostra o ícone do hambúrguer no telemóvel */
     .menu-icon {
         display: block !important;
