@@ -47,7 +47,7 @@ body {
         float: none !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 15px auto !important;
+        margin: -5px auto !important;
         left: auto !important;
         right: auto !important;
         transform: none !important;
@@ -72,7 +72,7 @@ body {
         color: white;
         cursor: pointer;
         text-align: center;
-        padding: 10px 0;
+        padding: 0px 0;
         transition: transform 0.3s ease;
     }
     /* Garante que as caixas internas não ultrapassam o limite do ecrã do telemóvel */
