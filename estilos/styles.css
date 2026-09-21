@@ -27,13 +27,15 @@ body {
 
 /* 2. APENAS PARA TELEMÓVEIS (Ecrãs até 768px) */
 @media (max-width: 768px) {
-   html, body {
-        width: 100% !important;
+    * {
+        box-sizing: border-box !important;
         max-width: 100% !important;
+    }
+     html, body {
+        width: 100% !important;
         overflow-x: hidden !important;
         margin: 0 !important;
         padding: 0 !important;
-        box-sizing: border-box !important;
     }
     .menu-fixo, header, .cabecalho {
         width: 100% !important;
@@ -66,7 +68,7 @@ body {
     }
 
     /* Contentor do menu fechado/aberto no telemóvel */
-  .menu-links {
+ .menu-links {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -77,7 +79,6 @@ body {
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        box-sizing: border-box !important;
         background-color: #0b2514 !important;
         max-height: 0;
         overflow: hidden;
@@ -119,7 +120,6 @@ body {
         font-size: 16px !important;
         font-weight: bold;
         width: 100% !important;
-        box-sizing: border-box !important;
     }
     body {
         padding-top: 60px !important;
