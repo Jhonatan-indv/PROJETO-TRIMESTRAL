@@ -27,11 +27,21 @@ body {
 
 /* 2. APENAS PARA TELEMÓVEIS (Ecrãs até 768px) */
 @media (max-width: 768px) {
-    html, body {
+   html, body {
         width: 100% !important;
+        max-width: 100% !important;
         overflow-x: hidden !important;
         margin: 0 !important;
         padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+    .menu-fixo, header, .cabecalho {
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
     }
 
     /* Mostra o ícone do hambúrguer no telemóvel */
@@ -102,14 +112,17 @@ body {
     }
 
     .menu-links a {
-        opacity: 0;
-        transform: translateY(-15px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        padding: 12px 0;
-        margin: 0;
-        text-align: center;
-        color: white;
-        text-decoration: none;
+        color: white !important;
+        text-align: center !important;
+        padding: 12px 0 !important;
+        text-decoration: none !important;
+        font-size: 16px !important;
+        font-weight: bold;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    body {
+        padding-top: 60px !important;
     }
 
     .menu-toggle:checked ~ .menu-links a {
