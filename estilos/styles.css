@@ -365,3 +365,16 @@ article > h3{
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: dá um pequeno relevo bonito */
 }
+article > h3{
+    text-align: center;
+}
+#video-fundo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Mantém o vídeo atrás de tudo */
+    object-fit: cover; /* Garante que o vídeo estica sem distorcer */
+    filter: brightness(0.6); /* Escurece um pouco o vídeo para o texto ficar mais legível */
+}
