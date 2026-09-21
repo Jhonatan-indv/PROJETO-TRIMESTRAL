@@ -19,12 +19,13 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-/* Esconde o checkbox e o ícone do hambúrguer por defeito no Computador */
+/* 1. FORA DO MEDIA (Aplica-se ao Computador por defeito) */
 .menu-toggle, 
 .menu-icon {
     display: none !important;
 }
-/* 1. No PC: O checkbox e o ícone do hambúrguer ficam SEMPRE invisíveis */
+
+/* 2. APENAS PARA TELEMÓVEIS (Ecrãs até 768px) */
 @media (max-width: 768px) {
     html, body {
         width: 100% !important;
@@ -33,38 +34,6 @@ body {
         padding: 0 !important;
     }
 
-    /* Garante que todas as caixas e linhas respeitam rigidamente o limite do ecrã */
-    @media (max-width: 768px) {
-    /* ... (todo o teu código media anterior) ... */
-
-    /* Garante que o bloco de conteúdo interno se comporta de forma fluida */
-    .linha-cima div, 
-    .linha-baixo div, 
-    article, 
-    section, 
-    div {
-        position: relative !important;
-        float: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: -5px auto !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Corrige os títulos para ficarem bem encaixados no topo de cada caixa no telemóvel */
-    h2 {
-        position: relative !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin: 0 0 15px 0 !important;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-    }
-}
     /* Mostra o ícone do hambúrguer no telemóvel */
     .menu-icon {
         display: block !important;
@@ -72,16 +41,8 @@ body {
         color: white;
         cursor: pointer;
         text-align: center;
-        padding: 0px 0;
+        padding: 10px 0;
         transition: transform 0.3s ease;
-    }
-    /* Garante que as caixas internas não ultrapassam o limite do ecrã do telemóvel */
-    .linha-cima > div, .linha-baixo > div {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
     }
 
     /* Roda levemente o ícone ao clicar */
@@ -94,49 +55,71 @@ body {
         display: none !important;
     }
 
-    /* Contentor do menu fechado */
+    /* Contentor do menu fechado/aberto no telemóvel */
     .menu-links {
         display: flex !important;
-        flex-direction: column;
-        width: 100%;
+        flex-direction: column !important;
+        width: 100% !important;
         background-color: #0b2514;
         max-height: 0;
         overflow: hidden;
         visibility: hidden;
-        transition: max-height 0.4s ease-in-out, visibility 0.4s ease, padding 0.4s ease;
+        transition: max-height 0.4s ease-in-out, visibility 0.4s ease-in-out, padding 0.4s ease-in-out;
     }
 
-    /* Estado do menu aberto: expande a caixa */
     .menu-toggle:checked ~ .menu-links {
-        max-height: 300px; /* Altura suficiente para os links */
+        max-height: 300px;
         visibility: visible;
         padding-bottom: 15px;
     }
 
-    /* Estado inicial dos links (escondidos e deslocados para cima) */
     .menu-links a {
         opacity: 0;
         transform: translateY(-15px);
         transition: opacity 0.3s ease, transform 0.3s ease;
         padding: 12px 0;
         margin: 0;
+        text-align: center;
+        color: white;
+        text-decoration: none;
     }
 
-    /* ANIMAÇÃO EM CASCATA: Os links descem suavemente quando aberto */
     .menu-toggle:checked ~ .menu-links a {
         opacity: 1;
         transform: translateY(0);
     }
 
-    /* Atraso progressivo para cada link descer um a um (efeito cascata elegante) */
-    .menu-toggle:checked ~ .menu-links a:nth-child(1) {
-        transition-delay: 0.1s;
+    /* Ajuste das caixas e títulos para não transbordarem no telemóvel */
+    .linha-cima, .linha-baixo {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
     }
-    .menu-toggle:checked ~ .menu-links a:nth-child(2) {
-        transition-delay: 0.2s;
+
+    .linha-cima > div, .linha-baixo > div, 
+    .caixa, article, section {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 15px 0 !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
     }
-    .menu-toggle:checked ~ .menu-links a:nth-child(3) {
-        transition-delay: 0.3s;
+
+    .linha-cima h2, .linha-baixo h2, 
+    .caixa h2, article h2, h2 {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        text-align: center !important;
+        font-size: 22px !important;
+        margin: 0 0 15px 0 !important;
+        box-sizing: border-box !important;
     }
 }
 
