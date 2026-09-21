@@ -107,7 +107,6 @@ body {
         padding: 20px 15px !important;
         box-sizing: border-box !important;
     }
-
     .linha-cima h2, .linha-baixo h2, 
     .caixa h2, article h2, h2 {
         position: relative !important;
@@ -254,7 +253,7 @@ nav a, .menu a {
 }
 .destaque, .noticias, .noticiass, .noticiasss {
     box-sizing: border-box;
-    background-color: rgba(252, 252, 252, 0.89);
+    background-color: rgba(252, 252, 252, 0.404);
     padding: 20px;
     margin-top: 20px;
     font-size: 1.4em;
