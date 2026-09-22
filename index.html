@@ -9,6 +9,8 @@
     <video autoplay muted loop id="video-fundo">
     <source src="fundo/4046254-hd_1280_720_25fps.mp4" type="video/mp4">
     O teu navegador não suporta vídeos de fundo.
+    <!-- No <head> do teu index.html -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </video>
 </head>
 <body>
@@ -41,7 +43,7 @@
    <main>
     <!-- PRIMEIRA LINHA: Políticas Públicas e Âmbito Cultural -->
     <div class="linha-cima">
-        <section class="destaque">
+        <section class="destaque" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="titulo">PÓLITICAS PUBLICAS</h2>
             <article>
                 <h3> O Papel do Estado como Indutor</h3>
@@ -49,7 +51,7 @@
             </article>
         </section>
 
-        <section class="noticias">
+        <section class="noticias" data-aos="fade-right" data-aos-duration="0200">
             <h2 class="titulo">OS PILARES DA ATUAÇÃO ESTATAL</h2>
             <article>
                 <h3>Âmbito Cultural</h3>
@@ -60,14 +62,14 @@
 
     <!-- SEGUNDA LINHA: Âmbito Natural e Inovação -->
     <div class="linha-baixo">
-        <section class="noticiass">
+        <section class="noticiass" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="titulo">ÂMBITO NATURAL</h2>
             <article>
                 <p class="parz">O Instituto Água e Terra (IAT) e a Secretaria do Desenvolvimento Sustentável (SEDEST) gerenciam as Unidades de Conservação (UCs). O Paraná possui uma vasta rede de parques estaduais, como o Parque Vila Velha e o Pico do Marumbi, que combinam proteção ecológica com turismo sustentável.</p>
             </article>
         </section>
 
-        <section class="noticiasss">
+        <section class="noticiasss" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="tituloz">INOVAÇÃO E DESTAQUE</h2>
             <article>
                 <h3>Programas de Incentivo</h3>
@@ -84,14 +86,14 @@
      </section>
      <section id="topico" class="pagina">
     <div class="linha-cima">
-        <section class="destaque">
+        <section class="destaque" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="titulo">PATRIMÔNIO CULTURAL</h2>
             <article>
                 <h3>O amparo Legal e o Tombamento</h3>
                 <p class="par">A legislação fornece as ferramentas legais e as punições necessárias para garantir que o patrimônio não seja destruído pelo avanço urbano desordenado. É regido pela Constituição Federal (Artigos 215 e 216) e pela Lei Estadual nº 1.211/1953, que dispõe sobre o tombamento de bens móveis e imóveis de interesse histórico e artístico no Paraná. Além disso, o plano diretor de municípios como Curitiba institui as "Unidades de Interesse de Preservação" (UIPs), que dão incentivos construtivos para proprietários que mantêm casarões históricos.</p>
             </article>
         </section>
-        <section class="noticias">
+        <section class="noticias" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="titulo">PATRIMÔNIO NATURAL</h2>
             <article>
                 <h3>Conservação e Desmatamento Zero</h3>
@@ -106,14 +108,14 @@
 <!-- PÁGINA 3: CONTATO -->
 <section id="engajamento" class="pagina">
     <div class="linha-cima">
-        <section class="destaque">
+        <section class="destaque" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="titulo">IDENTIDADE E PERTENCIMENTO</h2>
             <article>
                 <h3>Os Guardiões da Biodiversidade</h3>
                 <p class="par">Nenhuma política pública ou lei será totalmente eficaz sem a apropriação social. O engajamento comunitário garante a vigilância cotidiana e a transmissão do patrimônio para as próximas gerações. Comunidades tradicionais, como os faxinalenses (sistema tradicional de produção camponesa no interior do Paraná) e os ilhéus e caiçaras do litoral, são os verdadeiros guardiões da biodiversidade e dos costumes locais. O reconhecimento de seus territórios e saberes fortalece a preservação ambiental e cultural.</p>
             </article>
         </section>
-        <section class="noticias">
+        <section class="noticias" data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="titulo">CONSELHOS E ONGS</h2>
                     <article>
                         <h3>A Voz da Sociedade Civil</h3>
@@ -134,6 +136,10 @@
     </footer>
     <!-- FINAL DO SITE -->
   
-
+<!-- Antes de fechar o </body> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
