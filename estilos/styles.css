@@ -1,4 +1,4 @@
-@charset "UTF-8";
+charset "UTF-8";
 
 * {
     margin: 0;
@@ -418,4 +418,62 @@ article > h3{
     object-fit: cover; /* Garante que o vídeo estica sem distorcer */
     filter: brightness(0.6); /* Escurece um pouco o vídeo para o texto ficar mais legível */
 }
+.videos-duplos-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto 40px auto !important; /* Reduz o espaço acima para puxar o bloco para cima */
+    padding: 15px 20px;
+    text-align: center;
+    background: rgba(11, 37, 20, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-sizing: border-box !important;
+    margin-top: -20px !important;
+}
 
+.videos-duplos-container h2 {
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* Organiza os vídeos lado a lado no PC */
+.videos-grid {
+    display: flex;
+    gap: 20px; /* Espaço entre os dois vídeos */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Cada vídeo ocupa metade do espaço disponível */
+.videos-grid .video-responsive {
+    position: relative;
+    width: 50%;
+    padding-bottom: 28.125%; /* Mantém a proporção 16:9 ajustada para metade */
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.videos-grid .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsivo para Telemóvel: Passa a ficar um em cima do outro */
+@media (max-width: 768px) {
+    .videos-grid {
+        flex-direction: column !important;
+    }
+    
+    .videos-grid .video-responsive {
+        width: 100% !important;
+        padding-bottom: 56.25% !important; /* Retorna à proporção normal 16:9 para mobile */
+        margin-bottom: 15px;
+    }
+  
+}
