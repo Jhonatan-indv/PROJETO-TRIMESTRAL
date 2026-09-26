@@ -477,3 +477,10 @@ article > h3{
     }
   
 }
+header > h3{
+    text-decoration: none;
+}
+header > h3:hover{
+    text-decoration: underline;
+    color: #644a40;
+}
